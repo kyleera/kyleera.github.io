@@ -19,7 +19,10 @@ const Bio = () => {
             summary
           }
           social {
-            twitter
+            music163
+            douban
+            bilibili
+          
           }
         }
       }
@@ -36,7 +39,7 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
+        src="../images/profile-pic4.jpeg"
         width={50}
         height={50}
         quality={95}
@@ -44,11 +47,16 @@ const Bio = () => {
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          Written by <strong>{author.name}</strong> ，{author?.summary || null}
           {` `}
-          <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+          <br />
+          <a href={`https://music.163.com/#/user/home?id=${ social?.music163 || `` }`} target="_blank">
+            网易云音乐
           </a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href={`https://www.douban.com/people/${ social?.douban }`} target="_blank">豆瓣(记录看过的书/电影)</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href={`https://space.bilibili.com/${ social?.bilibili }`} target="_blank">bilibili创作</a>
         </p>
       )}
     </div>

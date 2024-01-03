@@ -58,6 +58,14 @@
   --color-heading: #1a202c;
   --color-heading-black: black;
   --color-accent: #d1dce5;
+  --color-primary-dark: #ffa7c4;
+  --color-heading-dark: rgba(255, 255, 255, 0.88);
+  --color-heading-white-dark: #fff;
+  --color-text-dark: #fff;
+ 
+  --bg: #fff;
+  --bg-dark: #000;
+  
 }
 
 /* HTML elements */
@@ -75,11 +83,35 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
+body, body.light {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: var(--bg);
 }
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  /* --bg: #282c35;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: #fff;
+  --textLink: #ffa7c4; */
+
+  background-color: var(--bg-dark);
+  color: var(--color-text-dark);
+}
+body.dark header
+body.dark header *,
+body.dark blockquote,
+body.dark blockquote * {
+  color: var(--color-heading-dark) !important;
+}
+body.dark a {
+  color: var(--color-primary-dark);
+}
+
+
+
 
 footer {
   padding: var(--spacing-6) var(--spacing-0);
@@ -114,11 +146,22 @@ h6 {
   font-weight: var(--fontWeight-bold);
   color: var(--color-heading);
 }
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6 {
+  color: var(--color-heading-dark);
+}
+
 
 h1 {
   font-weight: var(--fontWeight-black);
   font-size: var(--fontSize-6);
   color: var(--color-heading-black);
+}
+body.dark h1 {
+  color: var(--color-heading-white-dark);
 }
 
 h2 {
@@ -250,11 +293,16 @@ a:focus {
 
 .global-header {
   margin-bottom: var(--spacing-12);
+  display: flex;
+  align-items: center;
 }
 
 .main-heading {
   font-size: var(--fontSize-7);
   margin: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .post-list-item {

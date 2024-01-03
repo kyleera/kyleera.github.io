@@ -9,15 +9,22 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `JK's blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `郑佳凯`,
+      summary: `自我介绍......`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: ``,
+    siteUrl: `https://kyleera.github.io/`,
     social: {
-      twitter: `kylemathews`,
+      bilibili: '185814275',
+      douban: 'xx',
+      github: 'kyleera',
+      music163: '438431077'
+    },
+    comment: {
+      disqusShortName: "",
+      utterances: "",
     },
   },
   plugins: [
@@ -25,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${ __dirname }/content/blog`,
         name: `blog`,
       },
     },
@@ -33,7 +40,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${ __dirname }/src/images`,
       },
     },
     {
@@ -51,6 +58,12 @@ module.exports = {
             options: {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
+          },
+          {
+            resolve: `gatsby-remark-katex`,
+            options: {
+              strict: `ignore`
+            }
           },
           `gatsby-remark-prismjs`,
         ],
@@ -118,8 +131,9 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/assets/avatar.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-stylus`,
   ],
 }

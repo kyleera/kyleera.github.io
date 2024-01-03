@@ -1,0 +1,28 @@
+body {
+  // background-color: var(--bg);
+}
+
+body.light {
+  // --bg: #fff;
+  // --textNormal: hsla(0, 0%, 0%, 0.9);
+  // --textTitle: hsla(0, 0%, 0%, 0.9);
+  // --textLink: #007acc;
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --bg: #282c35;
+  --textNormal: rgba(255, 255, 255, 0.88);
+  --textTitle: #fff;
+  --textLink: #ffa7c4;
+
+  blockquote {
+    color: var(--textNormal);
+  }
+
+  table {
+    td, th {
+      border-color: var(--textNormal);
+    }
+  }
+}
