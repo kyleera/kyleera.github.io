@@ -383,3 +383,27 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+.small_table + table tr td {
+  font-size: 0.8rem !important;
+}
+
+
+.fuhao_table + p {
+  margin-bottom: 10px;
+}
+.fuhao_table + p + table thead {
+  display: none;
+}
+.fuhao_table + p + table tbody tr td {
+  border: none;
+  padding-bottom: 0.2rem;
+  vertical-align: top;
+}
+
+.fuhao_table + p + table tbody tr td:first-child *{
+  /* font-weight: bold; */
+}
+.fuhao_table + p + table tbody tr td:last-child{
+  padding-left: 20px;
+}
