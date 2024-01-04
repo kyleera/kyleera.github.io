@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `JK's blog`,
+    title: `Kyle's blog`,
     author: {
-      name: `郑佳凯`,
-      summary: `自我介绍......`,
+      name: `郑*凯`,
+      summary: `纵有疾风起，人生不言弃！`,
     },
     description: ``,
     siteUrl: `https://kyleera.github.io/`,
