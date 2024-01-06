@@ -11,7 +11,7 @@ module.exports = {
   siteMetadata: {
     title: `Kyle's blog`,
     author: {
-      name: `凯`,
+      name: `Kyle`,
       summary: `纵有疾风起，人生不言弃！`,
     },
     description: ``,
