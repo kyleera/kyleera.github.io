@@ -2729,3 +2729,21 @@ Alberta, 2016.
     </div>
 </div>
 <br/>
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/A3.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4 行星架二维零件图  </span>
+    </div>
+</div>
+<br/>
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/A4.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图5 太阳轮二维零件图  </span>
+    </div>
+</div>
+<br/>
