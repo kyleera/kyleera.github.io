@@ -17,7 +17,7 @@ description: "本文研究基于轻量化、低成本和高效率，满足赛事
 
 本文研究基于轻量化、低成本和高效率等方面为满足赛事主旨和赛车性能要求，设计一台以双电机驱动FSEC赛车中的行星齿轮减速机。首先根据整车基本参数和性能指标匹配赛车优选的驱动电机，进行动力参数匹配确定传动比。接着对行星齿轮传动系统进行参数计算、受力分析和强度校核。最后利用Catia三维建模软件建立行星齿轮减速机模型，通过ANSYS有限元分析软件，模拟极限工况下行星齿轮减速机的工作状态，并对行星齿轮传动系统不同部件进行有限元静力学分析和拓扑优化。
 
-**关键词：** `减速机`，`行星齿轮传动`，`结构设计`，`有限元分析`
+**关键词：** `减速机`，`行星齿轮传动`，`结构建模设计`，`有限元分析`
 
 
 
@@ -67,13 +67,13 @@ FSEC赛车包括传动系统、悬架系统和转向系统等诸多系统，而�
 
 本文研究基于轻量化、低成本和高效率等方面为满足赛事主旨和赛车性能要求，设计一台FSEC赛车中的行星齿轮减速机。先对其进行动力参数匹配，再进行尺寸参数和结构建模设计，最后通过有限元分析并优化。具体研究内容如下所示：
 
-①确定FSEC赛车驱动系统的布置形式，分析双电机分布式驱动系统的具体组成部分，根据整车基本参数和动力性能指标，匹配赛车最优选的驱动电机，进行动力参数匹配，确定赛车传动比范围。
+<span style="color:red">①确定FSEC赛车驱动系统的布置形式，分析双电机分布式驱动系统的具体组成部分，根据整车基本参数和动力性能指标，匹配赛车最优选的驱动电机，进行动力参数匹配，确定赛车传动比范围。</span>
 
-②确定行星齿轮传动系统的类型，根据动力参数匹配的传动比，对行星齿轮传动系统进行几何尺寸的参数计算、效率计算、受力分析和强度校核。
+<span style="color:red">②确定行星齿轮传动系统的类型，根据动力参数匹配的传动比，对行星齿轮传动系统进行几何尺寸的参数计算、效率计算、受力分析和强度校核。</span>
 
-③根据几何尺寸参数，利用Catia三维建模软件建立行星齿轮减速机的三维模型。
+<span style="color:red">③根据几何尺寸参数，利用Catia三维建模软件建立行星齿轮减速机的三维模型。</span>
 
-④利用ANSYS有限元分析软件，模拟极限工况下行星齿轮减速机的工作状态，并对行星齿轮传动系统不同部件进行有限元静力学分析和拓扑优化。
+<span style="color:red">④利用ANSYS有限元分析软件，模拟极限工况下行星齿轮减速机的工作状态，并对行星齿轮传动系统不同部件进行有限元静力学分析和拓扑优化。</span>
 
 
 
@@ -93,7 +93,7 @@ FSEC赛车包括传动系统、悬架系统和转向系统等诸多系统，而�
 
 <div style="display:flex; justify-content:center;">
     <div style="width:40%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-1.png"  />
         <span style="color:#666; font-size: 0.85rem;">图2-1 电机外特性曲线 </span>
     </div>
 </div>
@@ -103,23 +103,28 @@ FSEC赛车包括传动系统、悬架系统和转向系统等诸多系统，而�
 
 ②双电机后轮分布式驱动：多电机独立驱动可减小单电机的额定功率，可选择更小更轻的电机型号，增加驱动系统布置的灵活性，轴荷分配也更加合理。简化了传递系统的机构设计，减少了赛车的整备质量，提高整体性能。动力传递路线是驱动电机、减速器、半轴直到车轮。两台电机分布控制两个轮胎，使用电子控制差速算法，能够比传统的差速器机械差速实现更大的速度差，减少驱动轮滑转和动力浪费，故本文选取双电机布置形式作为设计方案。
 
-③四轮毂电机独立式驱动：<span style="color:red"><u>__是未来FSEC赛车中最值得发展的方向，传递动力路线和双电机驱动相同，不同在于四台电机独立控制四个轮胎__</u></span>，缩减了传动系统的机械长度，提高效率。四轮驱动能充分利用所有车轮的附着力，最大限度发挥电机动力，避免动力浪费。其缺点是成本昂贵，选用的电机外廓尺寸和整车的控制精度要求特别高，电机比功率要大，同时控制算法很复杂，且需要大量的试验验证。
+③四轮毂电机独立式驱动：是未来FSEC赛车中最值得发展的方向，传递动力路线和双电机驱动相同，不同在于四台电机独立控制四个轮胎，缩减了传动系统的机械长度，提高效率。四轮驱动能充分利用所有车轮的附着力，最大限度发挥电机动力，避免动力浪费。其缺点是成本昂贵，选用的电机外廓尺寸和整车的控制精度要求特别高，电机比功率要大，同时控制算法很复杂，且需要大量的试验验证。
 
 
+
+
+<!-- 多图并列 -->
 <div style="display:flex; justify-content:space-between;">
     <div style="width:30%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-2_1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-2_1.png"  />
         <span style="color:#666; font-size: 0.8rem;">图2-2(1) 单电机集中式驱动 </span>
     </div>
     <div style="width:30%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-2_1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-2_1.png"  />
         <span style="color:#666; font-size: 0.8rem;">图2-2(2) 双电机分布式驱动 </span>
     </div>
     <div style="width:30%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-2_1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-2_1.png"  />
         <span style="color:#666; font-size: 0.8rem;">图2-2(3) 四轮毂电机独立式驱动 </span>
     </div>
 </div>
+
+
 
 
 
@@ -347,7 +352,7 @@ $P_{\max } \geq \frac{\max \left(P_{\max 1}, P_{\max 2}\right)}{2}$
 
 <div style="display:flex; justify-content:center;">
     <div style="width:80%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-3.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-3.png"  />
         <span style="color:#666; font-size: 0.85rem;">图2-3 选定的电机型号EMRAX×208 </span>
     </div>
 </div>
@@ -399,7 +404,7 @@ $i_{\max a} \leq \frac{0.377 \cdot r \cdot n_{\max }}{v_{\max }}$
 
 <div style="display:flex; justify-content:center;">
     <div style="width:80%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-4.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-4.png"  />
         <span style="color:#666; font-size: 0.85rem;">图2-4 赛车起步加速受力分析图 </span>
     </div>
 </div>
@@ -608,7 +613,7 @@ $F_{j} = δ \cdot m \cdot  \frac{d_u}{d_t}$
 
 <div style="display:flex; justify-content:center;">
     <div style="width:100%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/2-5.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/2-5.png"  />
         <span style="color:#666; font-size: 0.85rem;">图2-5 EMRAX×208高压电机曲线图和效率图  </span>
     </div>
 </div>
@@ -667,7 +672,7 @@ ${\frac{0.377 \cdot r \cdot n_1}{v}} \leq i_d \leq {\frac{0.377 \cdot r \cdot n_
 
 <div style="display:flex; justify-content:center;">
     <div style="width:70%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-1.png"  />
         <span style="color:#666; font-size: 0.85rem;">图3-1 NGW型行星齿轮传动简图  </span>
     </div>
 </div>
@@ -959,17 +964,17 @@ $m'=\frac{d_1'}{z}$
 
 <div style="display:flex; justify-content:space-between;">
     <div style="width:40%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-2.1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-2.1.png"  />
         <span style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-2(1) 调质处理的 &nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-2_x1.png" height="20px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-2_x1.png" height="20px">
         </span>
     </div>
     <div style="width:40%; text-align:center; margin-top: 0.5rem">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-2.2.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-2.2.png"  />
         <span  style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-2(2) 渗碳淬火钢的&nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-2_x1.png" height="20px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-2_x1.png" height="20px">
         </span>
     </div>
 </div>
@@ -1036,17 +1041,17 @@ $K_{Fp}=1+1.5\cdot(K_{Hp}-1)$
 
 <div style="display:flex; justify-content:space-around;">
     <div style="width:45%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-3.1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-3.1.png"  />
         <span style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-3(1) 齿形系数 &nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-3_x1.png" height="21px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-3_x1.png" height="21px">
         </span>
     </div>
     <div style="width:43%; text-align:center; margin-top: 0.5rem">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-3.2.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-3.2.png"  />
         <span  style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-3(2) 应力修正系数&nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-3_x2.png" height="21px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-3_x2.png" height="21px">
         </span>
     </div>
 </div>
@@ -1057,17 +1062,17 @@ $K_{Fp}=1+1.5\cdot(K_{Hp}-1)$
 
 <div style="display:flex; justify-content:space-around;">
     <div style="width:45%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-4.1.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-4.1.png"  />
         <span style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-4(1) 调质处理的 &nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-4_x1.png" height="22px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-4_x1.png" height="22px">
         </span>
     </div>
     <div style="width:44%; text-align:center; margin-top: 0.5rem">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-4.2.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-4.2.png"  />
         <span  style="color:#666; font-size: 0.8rem; display:inline-flex; align-items: center;">
             图3-4(2) 调质处理的&nbsp;
-            <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-4_x1.png" height="22px">
+            <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-4_x1.png" height="22px">
         </span>
     </div>
 </div>
@@ -1247,7 +1252,7 @@ $\psi_{m b}^{x}=2 \pi f_{m} \cdot\left(\frac{1}{z_{c}}-\frac{1}{z_{b}}\right) \c
 
 <div style="display:flex; justify-content:center;">
     <div style="width:100%; text-align:center;">
-        <img src="https://zjr-github.oss-cn-shenzhen.aliyuncs.com/JKKKKKK/graduation/3-5.png"  />
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/3-5.png"  />
         <span style="color:#666; font-size: 0.85rem;">图3-5 受力分析图 </span>
     </div>
 </div>
@@ -1762,7 +1767,7 @@ $S_{F(b)}=\frac{\sigma_{F l i m}(b)}{\sigma_{F(b)}} \cdot Y_{N T(b)} \cdot Y_{\d
 
 
 
-
+<!-- 公式 -->
 <div style="position: relative;">
 <center> 
 
@@ -1793,4 +1798,926 @@ $S_{F(c)}=\frac{\sigma_{F l i m}(c)}{\sigma_{F(c)}} \cdot Y_{N T(c)} \cdot Y_{\d
 行星齿轮传动中最广用是直齿轮或斜齿轮。斜齿轮优点是齿面接触面积大，力学性能更好，耐用性和抗点蚀性能远胜直齿轮。但考虑到工艺和成本，直齿轮结构简单造价便宜，完全能满足赛车传输动力任务，结合赛事主旨本文设计齿轮均为直齿轮。
 
 ①通过专业齿轮软件KISSsoft建立模型。输入齿轮的基本参数，赋予材料属性和润滑方式，如下图4-1所示。此方法速度快，适合简单且标准的齿轮生成，对模型要求不高的情况适用。
+
+
+       
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-1.1.png"  />
+    </div>
+</div>
+<br/>
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:50%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-1.2.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-1 KISSsoft的行星齿轮级模块 </span>
+    </div>
+</div>
+<br/>
+
+
+②利用Catia进行参数化设计。建立齿轮基本参数的关系式和渐开线方程式，在创成式设计中创立多个点拟合齿形轮廓后进行封闭填充并进行阵列命令，如下图4-2所示，此方法方便更改齿轮基本参数，不需要从头重新设计。
+
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:90%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-2.1.png"  />
+    </div>
+</div>
+<br/>
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-2.2.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-2 Catia参数化建模 </span>
+    </div>
+</div>
+<br/>
+
+最终效果如下图4-3所示。
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-3.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-3 行星齿轮系的三维模型 </span>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+#### 4.1.1 行星齿轮传动的均载机构
+行星齿轮传动中由于结构上有多个行星轮，形成功率分流传递动力。由于制造和安装误差的情况是不可避免的，同时还需考虑构件的变形等因素，会使行星轮间的载荷分布式不均匀。当某个行星轮上载荷集中时，会限制其他行星轮，如下图4-4所示，传递动力就会失效，导致减速机会产生异常的工况或出现事故。
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:70%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-4.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-4 行星齿轮传动的载荷分布 </span>
+    </div>
+</div>
+<br/>
+
+
+为了解决行星轮间的载荷分布不均匀情况，可采用各种机械式的均载机构，使其自动调整位置，能有效地降低行星齿轮传动的制造精度，也更容易装配，主要有如下：
+
+①基本构件浮动均载机构：对行星传动中的1个或2个基本构件不进行径向定位支承。当行星轮间的载荷分布不均匀时，允许某个基本构件发生径向移动，实现自动调整位置，使载荷均衡。基本构件可以是中心轮、内齿轮和转臂，只用保证一个及以上基本构件浮动，即可起到均载作用。保证浮动的方法一般是将构件与可移式联轴器，即齿轮联轴器或十字滑块联轴器等连接在一起，如下图4-5所示。
+
+
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:45%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-5.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-5(1) 太阳轮a浮动 </span>
+    </div>
+    <div style="width:45%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-5.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-5(2) 内齿圈b浮动 </span> 
+    </div>
+</div>
+<br/>
+
+
+
+②杠杆联动均载机构：一般设有带偏心的行星轮轴和杠杆系统，在行星轮间的载荷分布不均匀时，杠杆系统会产生联动，使其自动调整位置，使载荷均衡，如下图4-6：
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-6.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-6(1) 2个行星轮联动 </span>
+    </div>
+    <div style="width:32.8%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-6.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-6(2) 3个行星轮联动 </span>
+    </div> 
+    <div style="width:32%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-6.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-6(3) 4个行星轮联动 </span>
+    </div> 
+</div>
+<br/>
+
+
+③采用弹性件的均载机构：在行星轮间的载荷分布不均匀时，通过弹性件的变形使载荷均衡。常用的弹性件均载有两种，一种是采用具有弹性结构的齿轮均载；另一种是采用弹性支撑均载，比如内齿圈与减速机箱体之间采用弹性套销支承，或使用弹性板簧支承在箱体上，如下图4-7所示。优点在于零件的数量较少，缓震能力很好，缺点是零件的制造精度极高。
+
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-7.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-7(1) 弹性体行星轮 </span>
+    </div>
+    <div style="width:39.3%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-7.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-7(2) 弹性套销支承 </span>
+    </div> 
+    <div style="width:26.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-7.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-7(3) 弹性板簧支承 </span>
+    </div> 
+</div>
+<br/>
+
+
+
+④完全刚性构件的均载机构：完全通过构件的高精度，使零件的制造和装配误差很小来保证均载效果。这种方法成本特别高，而且会使行星齿轮传动的制造和装配复杂化，因此基本不采用此均载机构。
+
+本文选取弹性套销的均载机构，保证传动功率能通过所有行星轮进行传递。
+
+
+
+
+
+
+#### 4.1.2 太阳轮的结构设计
+太阳轮a可设计为齿轮轴，适用于传递转矩较小；也可做成太阳齿轮套，和输入轴花键连接，适用于传递的转矩较大。考虑到赛车需紧急维护检修的情况，设计方案为后者。当太阳轮a不浮动时，应该采取齿轮两端支承，输入侧和输出侧分别采用向心球轴承由转臂x支承，如下图4-8。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-8.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-8(1) 太阳轮a的三维结构 </span>
+    </div>
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-8.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-8(2) 太阳轮a的支承结构 </span>
+    </div>    
+</div>
+
+
+
+
+
+#### 4.1.3 内齿圈的结构设计
+内齿圈b可在圆周方向上与机壳进行连接固定；也可在箱体的内壁上直接切割轮齿；或制成薄壁圆筒结构，增加内齿轮的柔性。本文设计内齿圈b采用弹性支承的均载机构，利用弹性套销将内齿轮连接于减速机箱体上，通过弹性件的变形使各行星轮间载荷分布均匀，如下图4-9所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:28%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-9.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-9(1) 内齿圈b的三维结构 </span>
+    </div>
+    <div style="width:33%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-9.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-9(2) 内齿圈b的均载机构 </span>
+    </div>    
+</div>
+
+
+
+
+#### 4.1.4 行星轮的结构设计
+行星轮c需加工内孔，在内孔中通过轴承将行星轮c在转臂x的动轴上，其中对于一般用途的传动机构，多采取滚动轴承作为行星轮的支承。一般情况下，行星轮用两个轴承来支承，如下图4-10所示。行星轮内加工定位轴肩，对轴承的外圈轴向定位，之后分别用弹性挡圈和隔离套环，放在转臂和轴承的内圈之间，对轴承的内圈轴向限位。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:28%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-10.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-10(1) 行星轮c的三维结构 </span>
+    </div>
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-10.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-10(2) 行星轮c的支承结构 </span>
+    </div>    
+</div>
+<br/>
+
+
+
+
+
+### 4.2 其他主要零件的三维模型建立
+#### 4.2.1 电机输入轴的结构设计
+设计渐开线花键输入轴的模数m=1.25mm，齿数z=15，分度圆压力角α=30°。根据《机械设计》知识，由电机传递的转矩初步计算输入轴的最小直径$d_i$：
+
+
+<div style="position: relative;">
+<center> 
+
+$\frac{T}{0.2 \cdot d_{i}^{3}} \leq\left[\tau_{T}\right]$
+
+</center>
+<span style="position: absolute; font-size: 0.9rem; top:50%;right:0; transform:translateY(-50%);">
+(4.1)
+</span>
+</div> 
+
+
+
+<div class="fuhao_table"></div>
+
+式中： 
+
+|             |                |
+|:------------------------------------|:---|     
+| [$τ_T$] | 许用扭转切应力（MPa），设计电机输入轴材料为40Cr，取$[τ_T ]=55MPa$ |
+| 
+| T | 电机转矩（N·mm），$T=80N·m$。 |
+
+
+代入参数计算可得，输入轴的最小直径$d_i≥19mm$。
+
+
+
+根据EMRAX电机供应商提供的二维图纸来设计电机法兰结构，如下图4-11(1)所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-11.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-11(1) EMRAX×208电机二维图纸 </span>
+    </div>
+</div>
+<br/>
+
+
+EMRAX电机带自锁功能，不需防松设计，故电机和法兰之间用螺钉连接即可。中间设计凸台用来定位便于安装，电机法兰与输入轴花键连接，并用弹性挡圈进行轴向固定，这样便于拆装减速机，如下图4-11(2)所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:37%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-11.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-11(2) 电机法兰和输入轴的装配结构 </span>
+    </div>    
+</div>
+<br/>
+
+
+
+
+
+
+#### 4.2.2 转臂输出轴的结构设计
+转臂x设计要使其外廓尺寸小，具备足够的强度和刚度，能确保行星轮间载荷分布均匀。转臂x目前最常用的是球墨铸铁QT600-3，成本低，重量轻，噪声小，离心力小。以前常用的ZG55铸钢件废品率高，经济性不好。
+
+转臂x上安装着多个行星轮和轴承，因此结构较复杂，制造和安装精度要求较高。转臂结构如下图4-12(1~3)所示：
+
+①双侧板整体式转臂：一般用在传动比$i_{ax}^b>4$，其刚性较好，获得广泛应用。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-12.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-12(1) 双侧板整体式转臂 </span>
+    </div> 
+</div>   
+<br/>
+
+②双侧板分开式转臂：一般用在传动比$i_{ax}^b<4$，是将一块侧板装配到另一块侧板上，结构较为复杂，但制造工艺比整体式方便多，且便于安装和拆卸。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-12.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-12(2) 双侧板分开式转臂 </span>
+    </div>    
+</div>
+<br/>
+
+
+③单侧板式转臂：结构简单，但缺点是行星轮为悬臂布置，受力不好。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-12.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-12(3) 单侧板式转臂 </span>
+    </div>    
+</div>
+<br/>
+
+
+
+本文采用双侧板分开式转臂，两块侧板使用不同毛坯分别制造，通过螺钉将两块侧板螺纹连接，连接板的数量为行星轮轮数。行星销轴的直径设计根据《机械设计》不再赘述。行星销轴穿过另一侧板，用弹性挡圈进行轴向固定，如下图4-13所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-13.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-13(1) 双侧板分开式转臂 </span>
+    </div>
+     <div style="width:32.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-13.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-13(2) 双侧板分开式转臂 </span>
+    </div>     
+</div>
+<br/>
+
+
+为了安装便利，保证输出轴的稳定性，设计行星架与球笼壳为一体，相对于分离式输出轴，简化了球笼壳与行星架的连接，动力直接从转臂传输到球笼壳上，提高传动效率。缺点是结构较为复杂，加工难度较大。
+
+球笼壳内部加工凹槽，装配三枢轴式等速万向节与半轴连接。凹槽处放硅胶垫起到缓震作用，使用弹性挡圈限制万向节的轴向移动。
+
+对于转臂的支承结构，靠近输入侧和输出侧分别都采用两个大小不同的向心球轴承，分别支承在太阳轮a齿轮套上和机壳上，如下图4-14所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-14.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-14(1) 转臂的支承结构 </span>
+    </div>
+     <div style="width:40.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-14.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-14(2) 转臂的支承结构 </span>
+    </div>     
+</div>
+<br/>
+
+
+
+
+
+
+
+
+### 4.3 行星齿轮减速箱的三维模型建立
+#### 4.3.1 机壳的结构设计
+常见FSEC赛车的减速机壳为两种，一是全包裹型，扭矩从内齿圈传导到箱体再到支架，此方法保护效果更好；二是内齿圈直接由机壳内部加工轮齿，即内齿圈直接连接支架，此方法消除了箱体所受到的扭矩。由于采用弹性件的均载机构，故采用前者。
+
+内齿圈采用弹性件连接的机壳1、靠近输入侧的机壳2和靠近输出侧的机壳3，之间通过紧固件进行螺纹连接，利用弹簧垫圈起摩擦防松作用，如下图4-15所示：
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:40%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-15.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-15(1) 行星齿轮减速机壳 </span>
+    </div>
+     <div style="width:35.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-15.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-15(2) 行星齿轮减速机壳 </span>
+    </div>     
+</div>
+<br/>
+
+机壳还需装载润滑油，一般润滑的方式有压力润滑法、飞溅润滑法和喷射润滑法等，其中飞溅润滑法通过齿轮传动带动润滑油，将润滑油飞溅到各个需要润滑的部件，不需要多余部件，此方法极大地减轻了减速机的质量体积，因此本文采取飞溅润滑法。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-16.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-16(1) 放油装置 </span>
+    </div>
+     <div style="width:36%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-16.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-16(2) 通气装置 </span>
+    </div>     
+</div>
+<br/>
+
+齿轮传动传递转矩时润滑油温度增高，机壳内气体压力升高，容易导致油封被破坏。因此需考虑通气装置通气塞，起到平衡内外气压的作用，并可用作进油方式。同时需要橡胶垫片，起到防松和防油作用。
+
+
+
+
+
+
+#### 4.3.2 支架和吊耳的结构设计
+对于实际工作状况，支架需要承受行星齿轮传动的反向扭矩和减速机自身的重量。为了保证减速机支架具有良好的力学性能和轻量化，选择铝合金材料7075-T6。为了后期拆装维护的便利，设计分离式支架上下两片，通过螺栓与机壳固定，如下图4-17：
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:30.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-17.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-17(1) 减速机支架 </span>
+    </div>
+     <div style="width:36%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-17.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-17(2) 支架与机壳装配 </span>
+    </div>     
+</div>
+<br/>
+
+吊耳需焊接在车架上，故将吊耳设计为两块，吊耳1与车架焊接，吊耳2分别与吊耳1和机壳支架采用紧固件连接，弹簧垫圈起摩擦防松作用，如下图4-18所示。吊耳2选用和支架一样的铝合金材料7075-T6；因7075-T6会产生热衰退，故吊耳1选用45钢。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-18.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-18(1) 吊耳 </span>
+    </div>
+     <div style="width:40%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-18.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-18(2) 吊耳与支架装配 </span>
+    </div>     
+</div>
+<br/>
+
+此设计方案极大减少拆装时间，提高赛车拆装效率。
+<br/><br/>
+
+
+
+
+
+
+
+
+### 4.4 标准件的选取
+#### 4.4.1 轴承的选取
+轴承起到支承机械旋转体，降低零件的摩擦系数，提高耐久度和机械效率。前文已说明采用滚动轴承，选用单列深沟球轴承。查询《机械设计手册》深沟球轴承参数，选用如下表4-1的轴承型号参数，尺寸参数如下图4-19，选取基本额定动载荷值偏大轴承。
+
+<!-- 表注 -->
+<div style="display:flex; justify-content:center;">
+    <span style="color:#666; font-size: 0.8rem;">表4-1 深沟球轴承型号及参数 </span>
+</div>
+<br/>
+
+<div class="small_table"></div>
+
+| 轴承位置        | 轴承型号        | 内径$d$  | 外径$D$  | 宽度$B$ | 轴挡肩内径$d_a$ | 轴挡肩外径$D_a$ |
+|:-------------|:-------------|:-----------|:-----------|:----------|:-----------------|:----------------|
+| 输入侧：<br/>太阳轮-转臂  | `61806`       | `30`        | `42`        | `7`        | <code class="language-text">$32≤d_a≤32.5$</code>   | <code class="language-text">$D_a≤40 $</code>       |
+| 输入侧：<br/>转臂-机壳   | `61810`       | `50`        | `65`        | `7`        | <code class="language-text">$52≤d_a$</code>        | <code class="language-text">$D_a≤63 $</code>       |
+| 输出侧：<br/>太阳轮-转臂  | `W61705-2RS1` | `25`        | `32`        | `4`        | <code class="language-text">$26.5≤d_a≤27$</code>   | <code class="language-text">$D_a≤31 $</code>       |
+| 输出侧：<br/>转臂-机壳   | `61819`       | `95`        | `120`       | `13`       | <code class="language-text">$99.6≤d_a$</cdoe>      | <code class="language-text">$D_a≤115 $</code>      |
+| 行星轮-转臂      | `63801`       | `12`        | `21`        | `7`        | <code class="language-text">$13.5$</code>          | <code class="language-text">$D_a≤19.5 $</code>     |
+
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-19.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-19(1) 深沟球轴承剖视图 </span>
+    </div>
+     <div style="width:34.7%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-19.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-19(2) 深沟球轴承剖视图 </span>
+    </div>     
+</div>
+<br/>
+
+
+其中，靠近输出侧的太阳轮和转臂之间的轴承，应采用带嵌入式密封的不锈钢深沟球轴承。减速机装载的润滑油不超过三分之一，但如采用普通轴承，通过飞溅润滑法，仍有极少许润滑油会通过太阳轮和转臂之间的轴承溢出来。轴承支承位置如下图4-20：
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:50%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-20.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-20 轴承位置  </span>
+    </div>
+</div>
+<br/>
+
+
+
+
+
+
+#### 4.4.2 油封的选取
+油封主要作用是将润滑部件与不润滑部件进行隔离。其中动密封指两个耦合件之间存在相对运动的密封装置，静密封则相反。
+
+根据安装密封处部件相应的最高转速，需要考虑金属的导热性等。具体参考《机械设计手册》中根据转速和温度选择油封材料，如下图4-21所示，最终选用油封材料为氟橡胶。
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:85%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-21.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图4-21 考虑转速及温度的油封材料选择  </span>
+    </div>
+</div>
+<br/>
+
+本文设计输入侧和输出各一个动密封件，输入侧是机壳与太阳轮齿轮套之间，输出侧是机壳与转臂球笼壳之间。按国标GB/T13871-1992进行设计并装配如下图4-22所示：
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:42%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-22.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-22(1) 油封装配图 </span>
+    </div>
+     <div style="width:33%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/4-22.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图4-22(2) 油封装配图 </span>
+    </div>     
+</div>
+<br/>
+
+
+
+
+
+
+
+## 5 行星减速机各部件的有限元分析
+导入Catia三维模型的源文件后，创建分析系统Analysis Systems中的“静态结构Static Structural”，建立Catia的三维模型与ANSYS软件的连接，如下图5-1所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:33%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-1.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-1(1) 有限元静力学分析流程 </span>
+    </div>
+     <div style="width:60%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-1.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-1(2) 软件项目原理图 </span>
+    </div>     
+</div>
+<br/><br/>
+
+定义材料属性参数，为方便赋予材料，“工程数据源Engineering Data Sources”，创建自己的材料库。添加材料参数如材料的密度，如下表5-1和图5-2。
+
+<div style="display:flex; justify-content:center;">
+    <span style="color:#666; font-size: 0.8rem;">表5-1 行星减速机各部件的材料属性参数 </span>
+</div>
+<br/>
+
+| 部件  | 材料        | 杨氏模量<br/>$(GPa)$ | 泊松比    | 密度<br/>$(kg/m^3)$ | 屈服极限<br/>$(MPa)$ |
+|:-----|:-----------|:-------------|:--------|:--------------|:-------------|
+| 太阳轮 | `20CrMnTi`  | `212`         | `0.289`  | `7860`         | `835`         |
+| 行星轮 | `20CrMnTi`  | `212`         | `0.289`  | `7860`         | `835`         |
+| 内齿圈 | `40Cr`      | `211`         | `0.277`  | `7870`         | `785`         |
+| 行星架 | `QT600-3`   | `169`         | `0.286`  | `7120`         | `370`         |
+| 支架  | `7075-T6`   | `72`          | `0.33`   | `2810`         | `505`         |
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-2.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图5-2 定义材料库参数  </span>
+    </div>
+</div>
+<br/>
+
+其中弹性模量的大小，对应力结果不影响，但对变形结果影响；而屈服强度的大小，应力和变形结果均不影响；以及泊松比的大小，应力和变形结果都会影响，但变化范围很小。
+
+
+
+
+
+
+### 5.1 行星齿轮系的有限元静力学分析
+#### 5.1.1 施加约束、载荷及接触
+进行前处理需进行第一次默认网格划分，划分网格成功证明部件互不干涉。也可通过Catia中的DMU模块进行检查碰撞功能，检测行星齿轮系间的啮合是否干涉，如下图5-3所示，右侧图片最小值为0，即两者无干涉无间隙，刚好啮合。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:38%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-3.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-3(1) 行星齿轮系第一次网格划分 </span>
+    </div>
+     <div style="width:55.8%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-3.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-3(2) DMU检查碰撞 </span>
+    </div>     
+</div>
+<br/>
+
+对接触面进行定义，将连接Connection中默认接触Contact删除，创建命名选择Named Selection，分别选择各齿轮的齿面和齿根面。接触面定义种类有绑定的Bonded、允许少量无摩擦滑动No Separation、无摩擦的Frictionless、有摩擦的Frictional和粗糙的Rough等。
+
+本选取少量无摩擦滑动No Separation，更符合齿轮在极限工况下的接触形式，如下图5-4所示。
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-4.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图5-4 行星齿轮系的定义接触连接  </span>
+    </div>
+</div>
+<br/>
+
+设置接触连接时，需要加密接触部分网格大小。再从求解方案信息Solution Information中查询间隙Gap值，稍微加大在几何修改选项Geometric Modification中的偏移Offset值；或选择界面处理Interface Treatment中的调整接触Adjust to Touch。
+
+设置边界条件，约束目标模型。在连接Connection处添加连接副Connection Group，对太阳轮内花键面添加一个Body-Ground的回转Revolute进行自转；对各个行星轮内圈面分别添加一个Body-Ground的回转Revolute进行自转；对行星轮内圈面添加一个绕太阳轮Body-Body的回转Revolute作为公转；对内齿圈的外表面凹槽处添加Body-Ground的固定fixed约束。
+
+将电机法兰与输入轴考虑为刚性，忽略工况下的微小变形，在太阳轮的内花键处施加逆时针方向140N·m的力矩。同时添加圆柱形支承Cylindrical Support，分别插入到行星轮内圈的安装深沟球轴承处和内齿圈外表面的安装弹性套销处，并允许行星轮进行切向运动，如下图5-5所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:38%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-5.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-5(1) 太阳轮内花键施加载荷 </span>
+    </div>
+     <div style="width:42.3%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-5.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-5(2) 定义圆柱形支承 </span>
+    </div>     
+</div>
+<br/>
+
+
+
+
+
+#### 5.1.2 划分网格
+仿真网格类型有机械的Mechanical、非线性机械的Nonlinear Mechanical、和体动力学CFD等，而网络划分的质量好坏会对仿真结果产生很大的影响。为了确保精确性，采取Mechanical网格。
+
+对于单元分类，可分为实体单元、壳单元和杆/梁单元。本文应用实体单元，其可分为六或四面体单元，如下图5-6所示。由于有限元分析软件越来越智能化，四面体单元对于零部件分析是足够的，结果精度和六面体几乎无差距，故采用四面体网格。
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-6.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图5-6 有限元分析单元  </span>
+    </div>
+</div>
+<br/>
+
+在网格Mesh中插入方法Method设置为四面体单元Tetrahedrons。添加面尺寸调整resize，将各齿轮接触面网格加密。同时在网格Mesh的尺寸调整Sizing设置中改为Proximity和Curvature，并调整增长率Growth Rate使其网格过渡合理，如下图5-7所示。
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:35%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-7.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图5-7 行星齿轮系第二次网格划分  </span>
+    </div>
+</div>
+<br/>
+
+
+
+
+
+#### 5.1.3 行星齿轮系求解云图
+日常中齿轮常见的失效形式有点蚀和齿根断裂。齿轮点蚀现象是齿轮长时间工作，会齿面接触疲劳破坏，表面剥落，出现点状小坑。而齿根断裂则是由于设计不规范或超过材料屈服强度，导致的应力集中使其齿根被破坏。
+
+对模型进行求解计算，得到极限工况条件下各齿轮相应云图，如下图5-8至图5-10所示。
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-8.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-8(1) 太阳轮位移云图 </span>
+    </div>
+     <div style="width:31.7%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-8.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-8(2) 太阳轮应力云图 </span>
+    </div>     
+     <div style="width:30.2%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-8.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-8(3) 太阳轮应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+太阳轮在齿面和齿顶的变形量最大，为0.064mm；在齿根处的等效应力最大，为209.83MPa；在齿面处的等效弹性应变最大，为0.001mm。最大应力值远低于材料20CrMnTi的屈服强度，且变形值极小不影响齿轮的正常工作，故太阳轮设计合理。
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-9.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-9(1) 行星轮位移云图 </span>
+    </div>
+     <div style="width:29.8%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-9.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-9(2) 行星轮应力云图 </span>
+    </div>     
+     <div style="width:31.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-9.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-9(3) 行星轮应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+行星轮与太阳轮啮合处的齿面变形量最大，为0.05mm；在齿根处的等效应力最大，为219.41MPa；与太阳轮啮合的齿面等效弹性形变最大，为0.001mm。最大应力值远低于材料20CrMnTi屈服强度，且变形值极小不影响齿轮的正常工作，故行星轮设计合理。
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-10.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-10(1) 内齿圈位移云图 </span>
+    </div>
+     <div style="width:31.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-10.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-10(2) 内齿圈应力云图 </span>
+    </div>     
+     <div style="width:32.2%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-10.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-10(3) 内齿圈应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+内齿圈在与行星轮啮合处的齿面变形量最大，为0.01mm；在齿根处的等效应力最大，为436.55MPa；在齿根处的等效弹性形变最大，为0.004mm。最大应力值低于材料40Cr的屈服强度，且变形值极小不影响齿轮的正常工作，故内齿圈设计合理。
+
+
+
+
+
+
+### 5.2 行星架的有限元静力学分析
+#### 5.2.1 划分网格、施加约束和载荷
+在赛车弹射起步瞬间是保持静止状态的，电机输出峰值扭矩140N·m，故将行星架的球笼壳面考虑为静止状态。
+
+根据前文（公式3.21）行星轮传递给行星架的扭矩为496.36N·m。将行星架与半轴的接触区域添加固定fixed，在行星架放置深沟球轴承处的轴上施加顺时针方向力矩496.36N·m，如下图5-11所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:31%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-11.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-11(1) 行星架施加约束和载荷 </span>
+    </div>
+    <div style="width:32.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-11.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-11(2) 行星架施加约束和载荷 </span>
+    </div>     
+</div>
+<br/>
+
+需对行星架上的圆角处加密网格，才能得到较精确的应力值大小。
+
+
+
+
+#### 5.2.2 行星架求解云图
+对模型进行求解计算。得到极限工况条件下行星架云图如下图5-12所示。
+
+<div style="display:flex; justify-content:space-around;">
+    <div style="width:33.7%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-12.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-12(1) 行星架位移云图 </span>
+    </div>
+    <div style="width:30%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-12.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-12(2) 行星架应力云图 </span>
+    </div>  
+    <div style="width:30.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-12.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-12(3) 行星架应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+行星架在安装轴承的轴最顶端处的变形量最大，为0.055mm；在轴最底端圆角处的等效应力最大，为229.74MPa；在轴最底端圆角处的等效弹性形变最大，为0.0011mm。最大应力值低于材料QT600-3的屈服强度，且变形值极小，故行星架设计合理。
+
+
+
+
+
+
+### 5.3 减速机壳支架的拓扑优化
+#### 5.3.1 划分网格、施加约束和载荷
+行星减速机的上下支架分别与吊耳螺栓连接，故对四个孔进行约束。据前文公式（3.22）对与机壳螺纹连接处施加逆时针方向的总扭矩356.36N·m并进行平分，对上下支架的螺栓和机壳的连接处加密网格，如下图5-13所示。
+
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:50%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-13.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-13(1) 对支架施加约束和载荷 </span>
+    </div>
+    <div style="width:45.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-13.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-13(2) 面尺寸调整网格 </span>
+    </div>     
+</div>
+
+
+
+
+#### 5.3.2 支架求解云图
+对模型进行求解计算。得到极限工况条件下行星减速机支架云图，如下图5-14：
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:33%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-14.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-14(1) 支架位移云图 </span>
+    </div>
+    <div style="width:32.3%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-14.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-14(2) 支架应力云图 </span>
+    </div>  
+    <div style="width:32%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-14.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-14(3) 支架应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+
+上下支架与机壳连接处的变形量最大，为0.003mm；同位置等效应力（Von Mises）也最大，为99.5MPa；等效弹性形变也最大，为0.0005mm。可见最大应力值远低于材料7075-T6的屈服强度，且变形值极小，故行星架设计合理。
+
+
+
+
+
+
+#### 5.3.3 支架的拓扑优化
+创建“拓扑优化Topology Optimization”算例与静态结构关联，设置响应约束Response Constraints保留30%后，求解计算，得到如下图5-15所示。
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:40%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-15.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-15(1) 建立算例联系 </span>
+    </div>
+    <div style="width:50%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-15.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-15(2) 拓扑优化后的支架 </span>
+    </div>     
+</div>
+
+
+可见软件拓扑优化后整体美观程度不好，同时参考上图5-16的应力云图，对支架多次自己多次修改优化再分析，最终优化模型如下图5-16所示。
+
+<div style="display:flex; justify-content:space-between;">
+    <div style="width:33%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-16.1.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-16(1) 支架优化后位移云图 </span>
+    </div>
+    <div style="width:32.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-16.2.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-16(2) 支架优化后应力云图 </span>
+    </div>  
+    <div style="width:31.5%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/5-16.3.png"  />
+        <span style="color:#666; font-size: 0.8rem;">图5-16(3) 支架优化后应变云图 </span>
+    </div>   
+</div>
+<br/>
+
+上下支架与机壳的螺栓连接处变形量最大，为0.02mm；同位置等效应力（Von Mises）最大，为454.5MPa；等效弹性形变也最大，为0.003mm。对比前文可见总变形量、应力和应变都增大许多，但总变形量仍极小，且应力最大值仍低于支架材料7075-T6的屈服强度，故支架最后一次拓扑优化的结构合理，达到了轻量化的目的，在一定程度上减少了整车质量，提高赛车性能。
+
+对于行星齿轮减速机其他零部件的有限元静力学分析和拓扑优化，也同前文进行的行星齿轮系、行星架和减速机支架方法相同，后文不在赘述，最终优化后的装配图和二维工程图纸可参考附录。
+
+
+
+
+
+
+
+
+## 6 结论
+### 6.1 全文总结
+本文研究基于轻量化、低成本和高效率等方面为满足赛事主旨和赛车性能要求，设计一台FSEC赛车中的行星齿轮减速机，其结论如下：
+
+①根据整车基本参数和动力性能指标，匹配赛车最优选电机为EMRAX×208，进行动力参数匹配，最终确定赛车传动比范围。并对各齿轮的齿数进行配齿计算后，对行星齿轮传动系统进行几何尺寸的参数计算、效率计算、受力分析和强度校核。
+
+②利用Catia建立行星齿轮传动副的三维模型。同时考虑到不可避免的制造和安装误差与构件的变形等影响因素，会导致行星轮间的载荷分布式不均匀。最终选择采用弹性套销的均载机构，使其自动调整位置，使载荷均衡，能够功率分流。同时对主要零部件进行合理的结构设计并装配，完成行星齿轮减速机的三维模型，并绘制二维工程图。
+
+③利用ANSYS Workbench有限元分析软件，模拟极限工况下行星齿轮减速机的工作状态。对行星齿轮系、行星架和减速机壳支架进行静力学有限元分析，赋予材料参数，建立有限元模型，划分网格，施加载荷和边界条件后，进行有限元求解，得到变形、应力和应变云图后进行分析和拓扑优化，最终结论行星齿轮减速机是满足设计要求的。
+
+### 6.2 展望与不足
+由于研究水平、时间和条件等因素的影响，本次行星齿轮减速机的设计与分析，还有诸多问题需要不断积累与完善：
+
+①本文选取双电机驱动方案以及较简单的2Z-X（A）型传动方案，以后应考虑具有极大未来趋势的四轮毂独立式驱动方案以及多级行星齿轮传动进行研究。
+
+②在对行星齿轮减速机的行星传动系统的有限元分析中，只是考虑了极限工况下的静力学分析。还应该对行星齿轮传动系统进行动力学分析，以及对系统进行故障频率特性、润滑特性及热弹耦合性等内容进行分析。
+
+③对行星齿轮减速机的有限元分析，都是基于理论计算与软件仿真，并没有对仿真结果进行台架试验验证等。
+<br/><br/>
+
+
+
+
+
+### 参考文献
+[1]	饶振纲. 行星齿轮传动设计[M]. 北京:化学工业出版社, 2014.
+
+[2]	濮良贵, 陈国定, 吴立言. 机械设计[M]. 北京: 高等教育出版社, 2013.
+
+[3]	孙桓, 陈作模, 葛文杰. 机械原理[M]. 北京: 高等教育出版社, 2013.
+
+[4]	蒋春松, 孙浩. ANSYS有限元分析与工程应用[M]. 北京: 电子工业出版社, 2012.
+
+[5]	闻邦椿. 机械设计手册[M]. 北京: 机械工业出版社,2010.
+
+[6]	余志生. 汽车理论[M]. 北京: 机械工业出版社. 2009.
+
+[7]	寇尊权, 王多. 机械设计课程设计[M]. 吉林: 机械工业出版社. 2006.
+
+[8]	渐开线齿轮行星传动的设计与制造编委会. 渐开线齿轮行星传动的设计与制造[M]. 北京: 机械工业出版社, 2002.
+
+[9]	中国大学生方程式汽车大赛规则[S]. 中国汽车工程学会, 2020.
+
+[10]	郭雷. FSEC赛车传动系统设计与转矩分配策略研究[D]. 辽宁工业大学, 2021.
+
+[11]	韩炜. 某3.5吨电驱动桥行星齿轮减速器齿轮传动系统设计及分析[D]. 武汉理工大学, 2020.
+
+[12]	利仁滨. FSAC赛车驱动系统设计与研究[D]. 广东工业大学, 2020.
+
+[13]	李海鹏. FSEC电动赛车驱动系统及转矩控制策略研究[D]. 福州大学, 2018.
+
+[14]	邓家奇. FSAE纯电动赛车动力匹配及试验研究[D]. 长安大学, 2016.
+
+[15]	李翠翠. NGW行星齿轮减速器三维参数化设计与结构优化[D]. 济南大学, 2016.
+
+[16]	黄奕宏. 行星齿轮传动系统特征频率提取与分析[D]. 华南理工大学, 2015.
+
+[17]	徐彪. 行星齿轮减速器传动装置分析与研究[D]. 长安大学, 2015.
+
+[18]	周飞鲲. 纯电动汽车动力系统参数匹配及整车控制策略研究[D]. 吉林大学, 2013.
+
+[19]	李辉云. 行星齿轮减速器仿真及有限元份研究[D]. 河北工业大学, 2013.
+
+[20]	Liang X H. Dynamics Based Vibration Signal Modeling and Fault Detection of Planetary Gearboxes[D].Edmoton: University of 
+Alberta, 2016.
+
+[21]	张倩. 中国大学生方程式汽车大赛与实践教学的研究[J]. 教育教学论坛, 2018(43):28-29.
+
+[22]	贺焕利, 蒲雨. FSEC电动方程式赛车动力系统匹配设计[J]. 汽车实用技术, 2018(24):13-16.
+
+[23]	刘炀, 孙飞扬, 周曼莉. 基于KISSsoft的电动汽车变速箱齿轮修形优化设计[J]. 模具工业, 2018, 44(10):17-20+28.
+
+[24]	张燕. 基于ANSYS的轮边减速器行星齿轮系有限元分析[J]. 安顺学院学报, 2018, 20(05):122-127.
+
+[25]	刘涛, 李浙昆, 李硕, 杨越. 基于ANSYS的减速机齿轮箱结构优化[J]. 农业装备与车辆工程, 2020, 58(09):117-119.
+
+[26]	颜泽荣. 基于ANSYS Workbench的小功率赛车减速箱直齿轮有限元分析[J]. 时代农机, 2016, 43(06):45-47.
+
+[27]	吴先坤, 程义, 柯宝平, 潘岱松. 基于ANSYS Workbench的电机行星齿轮结构设计研究与分析[J]. 客车技术, 2019(05):7-10+16.
+
+<br/>
+
+
+
+### 附录
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/-1.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图1 EMRAX-208电机技术参数  </span>
+    </div>
+</div>
+<br/>
+
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/-2.1.png"  />
+    </div>
+</div>
+
+<div style="display:flex; justify-content:center;">
+    <div style="width:100%; text-align:center;">
+        <img src="https://macbesu-1254191953.cos.ap-guangzhou.myqcloud.com/zjr-github/JKKKKKK/graduation/-2.2.png"  />
+        <span style="color:#666; font-size: 0.85rem;">图2 减速机三维装配图  </span>
+    </div>
+</div>
+<br/>
 
