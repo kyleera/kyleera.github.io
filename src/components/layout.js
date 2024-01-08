@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import Toggle from "./toggle"
-// import mediumZoom from "medium-zoom"
+import mediumZoom from "medium-zoom"
 
 import "../styles/global.styl"
 
@@ -17,7 +17,7 @@ const Layout = ({ location, title, children }) => {
       setTheme(window.__theme)
       window.__onThemeChange = () => setTheme(window.__theme)
     }
-    // mediumZoom(".blog-post img", { background: '#212530' })
+    mediumZoom(".blog-post img", { background: '#212530' })
   }, [])
 
   if (isRootPath) {
