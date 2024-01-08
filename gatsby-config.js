@@ -18,7 +18,7 @@ module.exports = {
     siteUrl: `https://kyleera.github.io/`,
     social: {
       bilibili: '185814275',
-      douban: '4678441',
+      douban: 'Kyle-Jaeger',
       github: 'kyleera',
       music163: '438431077'
     },
