@@ -50,11 +50,9 @@ const Bio = () => {
           Written by <strong>{author.name}</strong>，{author?.summary || null}
           {` `}
           <br />
-          <a href={`https://music.163.com/#/user/home?id=${ social?.music163 || `` }`} target="_blank">
-            网易云音乐
-          </a>
+          <a href={`https://music.163.com/#/user/home?id=${ social?.music163 || `` }`} target="_blank">网易云音乐</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
-          <a href={`https://www.douban.com/people/${ social?.douban }`} target="_blank">豆瓣(记录看过的书/电影)</a>
+          <a href={`https://www.douban.com/people/Kyle-Jaeger/?_i=${ social?.douban }`} target="_blank">豆瓣(记录看过的书/电影)</a>
           &nbsp;&nbsp;|&nbsp;&nbsp;
           <a href={`https://space.bilibili.com/${ social?.bilibili }`} target="_blank">bilibili创作</a>
         </p>
